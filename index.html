@@ -1,1 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>WARANGAL DISTRICT - KHANPUR MANDAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#eef3f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b5394;
+padding:15px 25px;
+color:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.logo{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.title{
+text-align:center;
+flex:1;
+}
+
+.title h1{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.title h2{
+font-size:18px;
+font-weight:normal;
+}
+
+.search-box{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+.search-box input{
+width:100%;
+padding:14px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.search-box input:focus{
+border-color:#0b5394;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.place{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.place:hover{
+transform:translateY(-3px);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#dbeeff;
+font-size:28px;
+}
+
+.info h3{
+color:#0b5394;
+margin-bottom:5px;
+}
+
+.info p{
+color:#666;
+}
+
+.open-btn{
+background:#0b5394;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.open-btn:hover{
+background:#1565c0;
+}
+
+footer{
+background:#0b5394;
+color:#fff;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.place{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="ou-logo.png" alt="OU Logo" class="logo">
+
+<div class="title">
+<h1>WARANGAL DISTRICT</h1>
+<h2>KHANPUR MANDAL</h2>
+</div>
+
+<img src="otbi-logo.png" alt="OTBI Logo" class="logo">
+
+</header>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Place..."
+onkeyup="searchPlaces()">
+</div>
+
+<div class="container" id="places">
+  <!-- 1 -->
+<div class="place">
+<div class="left">
+<div class="icon">💊</div>
+<div class="info">
+<h3>KNP-KAMAKSHI MEDKAL STORE</h3>
+<p>Medical Store</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89232,79.93974" target="_blank">Open Map</a>
+</div>
+
+<!-- 2 -->
+<div class="place">
+<div class="left">
+<div class="icon">⛽</div>
+<div class="info">
+<h3>KNP-OMSAI FILLING</h3>
+<p>Petrol Pump</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89307,79.93616" target="_blank">Open Map</a>
+</div>
+
+<!-- 3 -->
+<div class="place">
+<div class="left">
+<div class="icon">🧱</div>
+<div class="info">
+<h3>KNP-KAMAL BRICKS</h3>
+<p>Bricks</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89666,79.93267" target="_blank">Open Map</a>
+</div>
+
+<!-- 4 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏥</div>
+<div class="info">
+<h3>KNP-SANDHYA AYURVEDHA</h3>
+<p>Hospital</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89854,79.93016" target="_blank">Open Map</a>
+</div>
+
+<!-- 5 -->
+<div class="place">
+<div class="left">
+<div class="icon">⚡</div>
+<div class="info">
+<h3>KNP-POWER SUB STATION</h3>
+<p>Power Sub Station</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89423,79.92862" target="_blank">Open Map</a>
+</div>
+
+<!-- 6 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏢</div>
+<div class="info">
+<h3>KNP-MRO OFFICE</h3>
+<p>Government Office</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89493,79.92650" target="_blank">Open Map</a>
+</div>
+
+<!-- 7 -->
+<div class="place">
+<div class="left">
+<div class="icon">🛕</div>
+<div class="info">
+<h3>KNP-LAXMINARSIMHA</h3>
+<p>Temple</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.90284,79.92586" target="_blank">Open Map</a>
+</div>
+
+<!-- 8 -->
+<div class="place">
+<div class="left">
+<div class="icon">🎉</div>
+<div class="info">
+<h3>KNP-PEDDS RANGA GARDENS</h3>
+<p>Function Hall</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.90911,79.91973" target="_blank">Open Map</a>
+</div>
+
+<!-- 9 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏥</div>
+<div class="info">
+<h3>KNP-GOVT HOSPITAL</h3>
+<p>Hospital</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89620,79.92740" target="_blank">Open Map</a>
+</div>
+
+<!-- 10 -->
+<div class="place">
+<div class="left">
+<div class="icon">⛪</div>
+<div class="info">
+<h3>KNP-BAPTIST CHURCH</h3>
+<p>Church</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89612,79.92707" target="_blank">Open Map</a>
+</div>
+  <!-- 11 -->
+<div class="place">
+<div class="left">
+<div class="icon">🚌</div>
+<div class="info">
+<h3>KNP-SSRK TRAVELS</h3>
+<p>Travels</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89667,79.92686" target="_blank">Open Map</a>
+</div>
+
+<!-- 12 -->
+<div class="place">
+<div class="left">
+<div class="icon">🍾</div>
+<div class="info">
+<h3>KNP-MS WINES</h3>
+<p>Wine Shop</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.90065,79.93252" target="_blank">Open Map</a>
+</div>
+
+<!-- 13 -->
+<div class="place">
+<div class="left">
+<div class="icon">📱</div>
+<div class="info">
+<h3>KNP-SIRI COMMUNICATION</h3>
+<p>Mobile Shop</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89902,79.93008" target="_blank">Open Map</a>
+</div>
+
+<!-- 14 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏪</div>
+<div class="info">
+<h3>KNP-MAHALAXMI AGENCY</h3>
+<p>Agency</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89906,79.92957" target="_blank">Open Map</a>
+</div>
+
+<!-- 15 -->
+<div class="place">
+<div class="left">
+<div class="icon">🪪</div>
+<div class="info">
+<h3>KNP-AADHAR CENTER</h3>
+<p>Government Office</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89892,79.92994" target="_blank">Open Map</a>
+</div>
+
+<!-- 16 -->
+<div class="place">
+<div class="left">
+<div class="icon">🚌</div>
+<div class="info">
+<h3>KNP-RAVI TRAVELS</h3>
+<p>Travels</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89872,79.93006" target="_blank">Open Map</a>
+</div>
+
+<!-- 17 -->
+<div class="place">
+<div class="left">
+<div class="icon">🛒</div>
+<div class="info">
+<h3>KNP-DHANALAXMI KIRANAM</h3>
+<p>Kirana Store</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89862,79.93013" target="_blank">Open Map</a>
+</div>
+
+<!-- 18 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏍️</div>
+<div class="info">
+<h3>KNP-YUGENDRA BIKE MECHANIC</h3>
+<p>Bike Mechanic</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89792,79.93124" target="_blank">Open Map</a>
+</div>
+
+<!-- 19 -->
+<div class="place">
+<div class="left">
+<div class="icon">💧</div>
+<div class="info">
+<h3>KNP-VIGNESHWARA WATER</h3>
+<p>Water Plant</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89844,79.93105" target="_blank">Open Map</a>
+</div>
+
+<!-- 20 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏧</div>
+<div class="info">
+<h3>KNP-INDICASHA ATM</h3>
+<p>ATM</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89852,79.93088" target="_blank">Open Map</a>
+</div>
+  <!-- 21 -->
+<div class="place">
+<div class="left">
+<div class="icon">⚡</div>
+<div class="info">
+<h3>KNP-MATHASREE ELECTRIC</h3>
+<p>Electrical Shop</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89864,79.93079" target="_blank">Open Map</a>
+</div>
+
+<!-- 22 -->
+<div class="place">
+<div class="left">
+<div class="icon">🥤</div>
+<div class="info">
+<h3>KNP-JAINABHI PANSHOP</h3>
+<p>Pan Shop</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89880,79.93045" target="_blank">Open Map</a>
+</div>
+
+<!-- 23 -->
+<div class="place">
+<div class="left">
+<div class="icon">💊</div>
+<div class="info">
+<h3>KNP-SRINIVASA MEDICAL STORE</h3>
+<p>Medical Store</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89876,79.93048" target="_blank">Open Map</a>
+</div>
+
+<!-- 24 -->
+<div class="place">
+<div class="left">
+<div class="icon">📄</div>
+<div class="info">
+<h3>KNP-KAVITHA XEROX CENTER</h3>
+<p>Xerox Center</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89880,79.92984" target="_blank">Open Map</a>
+</div>
+
+<!-- 25 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏥</div>
+<div class="info">
+<h3>KNP-VENKANNA DAWAKHANA</h3>
+<p>Clinic</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89848,79.93022" target="_blank">Open Map</a>
+</div>
+
+<!-- 26 -->
+<div class="place">
+<div class="left">
+<div class="icon">🥤</div>
+<div class="info">
+<h3>KNP-SAGAR PAN SHOP</h3>
+<p>Pan Shop</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89863,79.93076" target="_blank">Open Map</a>
+</div>
+
+<!-- 27 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏠</div>
+<div class="info">
+<h3>KNP-VADDE SAMPTH</h3>
+<p>House</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89829,79.92987" target="_blank">Open Map</a>
+</div>
+
+<!-- 28 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏠</div>
+<div class="info">
+<h3>KNP-MADAVA SATYAM</h3>
+<p>House</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89833,79.93061" target="_blank">Open Map</a>
+</div>
+
+<!-- 29 -->
+<div class="place">
+<div class="left">
+<div class="icon">🏫</div>
+<div class="info">
+<h3>KNP-MPPS</h3>
+<p>School</p>
+</div>
+</div>
+<a class="open-btn" href="https://www.google.com/maps?q=17.89883,79.92786" target="_blank">Open Map</a>
+</div>
+  </div>
+
+<footer>
+© 2026 WARANGAL DISTRICT - KHANPUR MANDAL
+</footer>
+
+<script>
+
+function searchPlaces(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let places=document.getElementsByClassName("place");
+
+for(let i=0;i<places.length;i++){
+
+let text=places[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+places[i].style.display="flex";
+}
+else{
+places[i].style.display="none";
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
